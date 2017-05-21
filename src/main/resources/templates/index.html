@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html ng-app="website">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MuruPuru</title>
+    <link rel="icon" type="image/png" href="favicon-32x32.png sizes=32x32"></link>
+    <link rel="icon" type="image/png" href="favicon-16x16.png sizes=16x16"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"></link>
+    <link rel="stylesheet" href="css/style.css"></link>
+    <link rel="stylesheet" href="css/responsive.css"></link>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+    <script type="text/javascript" src="js/jquery.menu.js"></script>
+</head>
+
+<!-- Body containing Angular App (Website) and its controller (PageCtrl)-->
+<body ng-app="website" ng-controller="pageCtrl">
+    <div id="map"></div>
+    <div id="page_wrapper">
+
+	<!-- Menu for mobile devices -->
+        <div id="mobile_menu_wrapper" class="back hidden hide-on-large-only">
+            <div id="mobile_menu_block" class="back hidden hide-on-large-only">
+                <div id="mm_logo" class="hide-on-large-only">
+                    <img src="img/m-logo.png" alt="MP"></img>
+                </div>
+                <p class="m_home mobile_btn">{{pages.home}}</p>
+                <p class="m_serv mobile_btn">{{pages.services}}</p>
+                <p class="m_team mobile_btn">{{pages.about}}</p>
+                <p class="m_contact mobile_btn">{{pages.contact}}</p>
+            </div>
+        </div>
+        <div id="mobile_menu_init_btn" class="hide-on-large-only"></div>
+
+
+	<!-- Landing Page Content -->
+        <div id="landing">
+            <div id="l_content">
+                <div id="c_logo" class="flow-text col s12">
+                    <img src="img/logo.png" alt="MP"></img>
+                </div>
+                <div id="c_name" class="flow-text col s12">MURUPURU</div>
+                <div id="c_slogan" class="flow-text col s12">{{pages.slogan}}</div>
+                <div id="c_phone" class="flow-text col s12">+358 4070 78489</div>
+                <div class="row" id="languages">
+                    <img id="suomi" src="img/suomi.png" alt="Suomi"></img>
+                    <img id="english" src="img/uk.png" alt="English"></img>
+                    <img id="eesti" src="img/eesti.png" alt="Eesti"></img>
+
+                </div>
+            </div>
+            <canvas class="canvas"> </canvas>
+        </div>
+
+	<!-- Menu for laptops and desktops -->
+        <div id="menu" class="pin hide-on-med-and-down flow-text">
+            <div class="m_but">
+                <p class="m_home">{{pages.home}}</p>
+            </div>
+            <div class="m_but">
+                <p class="m_serv">{{pages.services}}</p>
+            </div>
+            <div class="m_but">
+                <img src="img/m-logo.png" class="brand-logo" alt="M.L"></img>
+            </div>
+            <div class="m_but">
+                <p class="m_team">{{pages.about}}</p>
+            </div>
+            <div class="m_but">
+                <p class="m_contact">{{pages.contact}}</p>
+            </div>
+        </div>
+
+ 	<!-- Services Div -->
+        <div id="serv_w" class="section_wrapper">
+            <div id="services">
+                <div class="row col s12 header">
+                    <h1 class="flow-text">{{pages.services}}</h1>
+                </div>
+                <div class="half">
+                    <h1 class="flow-text small_h">{{pages.serv1H}}</h1>
+                    <p class="flow-text">{{pages.servTxt}}</p>
+                </div>
+                <div class="half">
+                    <img src="img/resp.png"></img>
+                </div>
+            </div>
+        </div>
+
+ 	<!-- Divider Div -->
+        <div class="banner" id="banner1"></div>
+
+	<!-- About Div -->
+        <div id="about_w" class="section_wrapper">
+            <div id="about">
+                <img src="img/m-logo.png"></img>
+                <div id="about_txt" class="row col s12 header">
+                    <h1 class="flow-text">MURUPURU OY</h1>
+                </div>
+                <p class="flow-text">{{pages.aboutTxt}}</p>
+            </div>
+        </div>
+
+	<!-- Divider Div -->
+        <div class="banner" id="banner2"></div>
+
+	<!-- Contact Div -->
+        <div id="contact_w" class="section_wrapper">
+            <div id="contact">
+                <div id="con_header" class="row col s12 header">
+                    <h1 class="flow-text">{{pages.contact}}</h1>
+                </div>
+
+                <!-- Contact Div left or upper side -->
+                <div id="contact_left" class="half">
+                    <div class="left_row">
+                        <div class="left_header">
+                            <img src="img/location.png"></img>{{pages.addressH}}
+                        </div>
+                        <div class="left_text">{{pages.addressTxt}}</div>
+                    </div>
+                    <div class="left_row">
+                        <div class="left_header ico_H ">
+                            <img src="img/phone.png"></img>{{pages.phoneH}}
+                        </div>
+                        <div class="left_text">{{pages.phoneTxt}}</div>
+                    </div>
+                    <div class="left_row">
+                        <div class="left_header ico_H " id="eMailH">
+                            <img src="img/mail.png"> </img>{{pages.eMail}}
+                        </div>
+                        <div class="left_text" id="eMailTxt">{{pages.eMailTxt}}</div>
+                    </div>
+                    <div class="left_row">
+                        <div class="social_icon" id="facebook" onclick="window.open( 'https://www.facebook.com/Murupuru-376398716031982/?fref=ts') ">
+                            <img src="img/facebook.png"></img>
+                        </div>
+                        <div class="social_icon" id="google" onclick="window.open( 'https://plus.google.com') ">
+                            <img src="img/g.png"></img>
+                        </div>
+                        <div class="social_icon" id="linkedin" onclick="window.open( 'https://www.linkedin.com/'); ">
+                            <img src="img/in.png"></img>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Div right or lower side -->
+                <div id="contact_right" class="half">
+                    <form action="mailto:elarsaks@murupuru.com" method="post" enctype="text/plain">
+                        <h1 class="flow-text small_h hide-on-med-and-up ">
+							{{pages.message}}</h1>
+                        <div class="input-field">
+                            <input id="first_name" type="text" class="materialize-textarea"></input>
+                            <label for="first_name">{{pages.eMail}}</label>
+                        </div>
+                        <div class="input-field">
+                            <input id="email" type="email" class="materialize-textarea">
+                            </input>
+                            <label for="email">{{pages.text}}</label>
+                        </div>
+                        <div class="input-field">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">{{pages.btn}}</label>
+                        </div>
+                        <input class="input-btn" type="submit" value="SEND" id="inPutBtn"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Page footer -->
+        <div id="footer">
+            <div class="pealkiri">
+                <div class="footer-logo">
+                    <a href="#"><img src="img/logo.png"></img>
+                    </a>
+                </div>
+                <span class="copyright">Copyright © 2016 | <a
+					href="murupuru.com"> MURUPURU OY</a>
+				</span>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="js/languages.js"></script>
+<script type="text/javascript" src="js/jquery.particles.js"></script>
+
+</html>

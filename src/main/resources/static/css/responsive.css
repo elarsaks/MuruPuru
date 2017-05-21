@@ -1,0 +1,146 @@
+
+/* Small Phone Screens */
+@media only screen and (max-height:360px) and (orientation:landscape) {
+    #c_logo img {
+        width: 10%;
+        max-width: 50px;
+        margin-top: 5vh
+    }
+    #c_name {
+        font-size: 130%
+    }
+    #c_slogan {
+        font-weight: 200;
+        font-size: 100%
+    }
+    #c_phone {
+        font-size: 100%;
+        margin-top: 1em
+    }
+    #languages {
+        padding-top: 1.3em;
+        margin: 0
+    }
+    #languages img {
+        width: 3em
+    }
+}
+
+
+/* Phone Screens Sideways */
+@media only screen and (min-height:361px) and (orientation:landscape) {
+    #l_content {
+        margin-top: 25vh
+    }
+    #c_logo img {
+        width: 10%;
+        max-width: 150px;
+        margin-top: 5vh
+    }
+    #c_name {
+        font-size: 3vw
+    }
+    #c_slogan {
+        font-weight: 200;
+        font-size: 2.5vw
+    }
+    #c_phone {
+        font-size: 2.3vw
+    }
+    #languages {
+        margin-top: 1.3em;
+        margin: 0
+    }
+    #languages img {
+        width: 3em
+    }
+    .banner {
+        height: 25vh
+    }
+}
+
+/* Effects all the phone screens */
+@media only screen and (min-height:100px) and (orientation:portrait) {
+    #l_content {
+        margin-top: 30vh
+    }
+    .banner {
+        height: 25vh
+    }
+}
+
+/* Small Phone Screens */
+@media only screen and (min-width:600px) {
+    .section_wrapper {
+        padding: 5%
+    }
+    .half {
+        margin: 0 1.5%
+    }
+    #about p {
+        width: 60%
+    }
+    #about img {
+        margin-bottom: 0
+    }
+    #contact {
+        display: inline-block;
+        vertical-align: top
+    }
+    #contact_right {
+        margin-top: 0
+    }
+    .left_row {
+        width: 100%;
+        margin-top: 7%;
+        display: inline-block
+    }
+    .left_header {
+        margin: 0 auto;
+        font-size: 1.5em;
+        width: 37%;
+        font-weight: 500;
+        float: left
+    }
+    .left_header img {
+        width: 1em;
+        padding: .1em
+    }
+    .left_text {
+        margin: 0 auto;
+        font-size: 130%;
+        width: 60%;
+        float: right
+    }
+}
+
+
+/* Tablet Sideways */
+@media only screen and (min-width:900px) and (min-height:470px) {
+    #c_logo img {
+        height: 6em;
+        width: 6em;
+        margin-top: 5vh
+    }
+    #c_name {
+        font-weight: 700;
+        font-size: 3em
+    }
+    #c_slogan {
+        font-weight: 200;
+        font-size: 2em
+    }
+    #c_phone {
+        font-weight: 600;
+        font-size: 1.7em;
+        margin-top: .5em;
+        color: #3a3a3a
+    }
+    #languages {
+        padding-top: 1em;
+        margin: 0
+    }
+    #languages img {
+        width: 6em
+    }
+}

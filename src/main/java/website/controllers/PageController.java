@@ -18,4 +18,9 @@ public class PageController {
 		return"index";
 	}
 	
+	@RequestMapping("/admin")
+	public String admin(Model model){
+		return"admin";
+	}
+	
 }

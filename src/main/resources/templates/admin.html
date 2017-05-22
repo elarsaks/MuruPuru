@@ -32,6 +32,8 @@
                 <p class="m_serv mobile_btn">{{pages.services}}</p>
                 <p class="m_team mobile_btn">{{pages.about}}</p>
                 <p class="m_contact mobile_btn">{{pages.contact}}</p>
+                <p class="m_save mobile_btn" id="save_m">SAVE</p>
+                <p class="m_log mobile_btn">LOG OUT</p>
             </div>
         </div>
         <div id="mobile_menu_init_btn" class="hide-on-large-only"></div>
@@ -44,8 +46,8 @@
                     <img src="img/logo.png" alt="MP"></img>
                 </div>
                 <div id="c_name" class="flow-text col s12">MURUPURU</div>
-                <div id="c_slogan" class="flow-text col s12">{{pages.slogan}}</div>
-                <div id="c_phone" class="flow-text col s12">+358 4070 78489</div>
+                <div id="c_slogan" class="content flow-text col s12">{{pages.slogan}}</div>
+                <div id="c_phone" class="flow-text col s12">{{pages.phoneTxt}}</div>
                 <div class="row" id="languages">
                     <img id="suomi" src="img/suomi.png" alt="Suomi"></img>
                     <img id="english" src="img/uk.png" alt="English"></img>
@@ -59,19 +61,25 @@
 	<!-- Menu for laptops and desktops -->
         <div id="menu" class="pin hide-on-med-and-down flow-text">
             <div class="m_but">
-                <p class="m_home">{{pages.home}}</p>
+                <p class="m_save" id="save">SAVE</p>
             </div>
             <div class="m_but">
-                <p class="m_serv">{{pages.services}}</p>
+                <p class="content m_home" id="home_d">{{pages.home}}</p>
+            </div>
+            <div class="m_but">
+                <p class="content m_serv" id="services_d">{{pages.services}}</p>
             </div>
             <div class="m_but">
                 <img src="img/m-logo.png" class="brand-logo" alt="M.L"></img>
             </div>
             <div class="m_but">
-                <p class="m_team">{{pages.about}}</p>
+                <p class="content m_team" id="about_d">{{pages.about}}</p>
             </div>
             <div class="m_but">
-                <p class="m_contact">{{pages.contact}}</p>
+                <p class="content m_contact" id="contact_d">{{pages.contact}}</p>
+            </div>
+            <div class="m_but">
+                <p class="m_log">LOG OUT</p>
             </div>
         </div>
 
@@ -79,11 +87,11 @@
         <div id="serv_w" class="section_wrapper">
             <div id="services">
                 <div class="row col s12 header">
-                    <h1 class="flow-text">{{pages.servicesH}}</h1>
+                    <h1 class="content flow-text" id="servicesH">{{pages.servicesH}}</h1>
                 </div>
                 <div class="half">
-                    <h1 class="flow-text small_h">{{pages.servH}}</h1>
-                    <p class="flow-text">{{pages.servTxt}}</p>
+                    <h1 class="content flow-text small_h" id="servH">{{pages.servH}}</h1>
+                    <p class="content flow-text" id="servTxt">{{pages.servTxt}}</p>
                 </div>
                 <div class="half">
                     <img src="img/resp.png"></img>
@@ -101,7 +109,7 @@
                 <div id="about_txt" class="row col s12 header">
                     <h1 class="flow-text">MURUPURU OY</h1>
                 </div>
-                <p class="flow-text">{{pages.aboutTxt}}</p>
+                <p class="content flow-text" id="aboutTxt">{{pages.aboutTxt}}</p>
             </div>
         </div>
 
@@ -112,28 +120,28 @@
         <div id="contact_w" class="section_wrapper">
             <div id="contact">
                 <div id="con_header" class="row col s12 header">
-                    <h1 class="flow-text">{{pages.contactH}}</h1>
+                    <h1 class="content flow-text" id="contactH">{{pages.contactH}}</h1>
                 </div>
 
                 <!-- Contact Div left or upper side -->
                 <div id="contact_left" class="half">
                     <div class="left_row">
-                        <div class="left_header">
-                            <img src="img/location.png"></img>{{pages.addressH}}
+                        <div class="content left_header" id="addressH">
+                            <img src="img/location.png" ></img>{{pages.addressH}}
                         </div>
-                        <div class="left_text">{{pages.addressTxt}}</div>
+                        <div class="content left_text" id="addressTxt" >{{pages.addressTxt}}</div>
                     </div>
                     <div class="left_row">
-                        <div class="left_header ico_H ">
+                        <div class="content left_header ico_H " id="phoneH" >
                             <img src="img/phone.png"></img>{{pages.phoneH}}
                         </div>
-                        <div class="left_text">{{pages.phoneTxt}}</div>
+                        <div class="content left_text" id="phoneTxt">{{pages.phoneTxt}}</div>
                     </div>
                     <div class="left_row">
-                        <div class="left_header ico_H " id="eMailH">
-                            <img src="img/mail.png"> </img>{{pages.eMail}}
+                        <div class="content left_header ico_H " id="eMail">
+                            <img src="img/mail.png"> </img> {{pages.eMail}}
                         </div>
-                        <div class="left_text" id="eMailTxt">{{pages.eMailTxt}}</div>
+                        <div class="content left_text" id="eMailTxt">{{pages.eMailTxt}}</div>
                     </div>
                     <div class="left_row">
                         <div class="social_icon" id="facebook" onclick="window.open( 'https://www.facebook.com/Murupuru-376398716031982/?fref=ts') ">
@@ -151,20 +159,19 @@
                 <!-- Contact Div right or lower side -->
                 <div id="contact_right" class="half">
                     <form action="mailto:elarsaks@murupuru.com" method="post" enctype="text/plain">
-                        <h1 class="flow-text small_h hide-on-med-and-up ">
+                        <h1 class="content flow-text small_h hide-on-med-and-up " id="message">
 							{{pages.message}}</h1>
                         <div class="input-field">
                             <input id="first_name" type="text" class="materialize-textarea"></input>
-                            <label for="first_name">{{pages.eMail}}</label>
+                            <label for="first_name"> {{pages.eMail}} </label>
                         </div>
                         <div class="input-field">
-                            <input id="email" type="email" class="materialize-textarea">
-                            </input>
-                            <label for="email">{{pages.name}}</label>
+                            <input id="email" type="email" class="materialize-textarea"></input>
+                            <label for="email" class="content " id="text">{{pages.name}}</label>
                         </div>
                         <div class="input-field">
                             <textarea id="textarea1" class="materialize-textarea"></textarea>
-                            <label for="textarea1">{{pages.text}}</label>
+                            <label for="textarea1" class="content " id="button">{{pages.text}}</label>
                         </div>
                         <input class="input-btn" type="submit" value="{{pages.btn}}" id="inPutBtn"></input>
                     </form>
@@ -188,5 +195,6 @@
 </body>
 <script type="text/javascript" src="js/languages.js"></script>
 <script type="text/javascript" src="js/jquery.particles.js"></script>
+<script type="text/javascript" src="js/adminData.js"></script>
 
 </html>

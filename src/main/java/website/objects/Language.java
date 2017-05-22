@@ -1,8 +1,3 @@
-/*
- * This is a language bean (object).
- * 
- */
-
 package website.objects;
 
 import java.util.List;

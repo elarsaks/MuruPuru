@@ -1,8 +1,3 @@
-/*
- * This is a language bean (object).
- * 
- */
-
 package website.objects;
 
 import javax.persistence.Entity;
@@ -23,9 +18,11 @@ public class Page {
 	private String services;
 	private String about;
 	private String contact;
+	private String servicesH;
 	private String servH;
 	private String servTxt;
 	private String aboutTxt;
+	private String contactH;
 	private String addressH;
 	private String addressTxt;
 	private String phoneH;
@@ -35,6 +32,7 @@ public class Page {
 	private String eMail;
 	private String text;
 	private String btn;
+	private String name;
 	
 	/* Connects Page to Language.
 	 * LanguageId is a foreign key foreign key referencing Language Entity  */
@@ -44,18 +42,20 @@ public class Page {
 	
 	public Page(){}
 
-	public Page(String slogan, String home, String services, String about, String contact, String servH, String servTxt,
-			String aboutTxt, String addressH, String addressTxt, String phoneH, String phoneTxt, String eMailTxt,
-			String message, String eMail, String text, String btn, Language language) {
+	public Page(String slogan, String home, String services, String about, String contact, String servicesH,String servH, String servTxt,
+			String aboutTxt, String contactH ,String addressH, String addressTxt, String phoneH, String phoneTxt, String eMailTxt,
+			String message, String eMail, String text, String btn, Language language, String name) {
 		super();
 		this.slogan = slogan;
 		this.home = home;
 		this.services = services;
 		this.about = about;
 		this.contact = contact;
+		this.servicesH = servicesH;
 		this.servH = servH;
 		this.servTxt = servTxt;
 		this.aboutTxt = aboutTxt;
+		this.contactH = contactH;
 		this.addressH = addressH;
 		this.addressTxt = addressTxt;
 		this.phoneH = phoneH;
@@ -66,15 +66,40 @@ public class Page {
 		this.text = text;
 		this.btn = btn;
 		this.language = language;
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
 		return "Page [pageId=" + pageId + ", slogan=" + slogan + ", home=" + home + ", services=" + services
-				+ ", about=" + about + ", contact=" + contact + ", servH=" + servH + ", servTxt=" + servTxt
-				+ ", aboutTxt=" + aboutTxt + ", addressH=" + addressH + ", addressTxt=" + addressTxt + ", phoneH="
+				+ ", about=" + about + ", contact=" + contact + ", servH=" + servH + ", servicesH=" + servicesH + ", servTxt=" + servTxt
+				+ ", aboutTxt=" + aboutTxt + ", contactH=" + contactH + ", addressH=" + addressH + ", addressTxt=" + addressTxt + ", phoneH="
 				+ phoneH + ", phoneTxt=" + phoneTxt + ", eMailTxt=" + eMailTxt + ", message=" + message + ", eMail="
-				+ eMail + ", text=" + text + ", btn=" + btn + ", language=" + language.getLanguage() + "]";
+				+ eMail + ", text=" + text + ", btn=" + btn + ", language=" + language.getLanguage() + ", name=" + name + "]";
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getServicesH() {
+		return servicesH;
+	}
+
+	public void setServicesH(String servicesH) {
+		this.servicesH = servicesH;
+	}
+
+	public String getContactH() {
+		return contactH;
+	}
+
+	public void setContactH(String contactH) {
+		this.contactH = contactH;
 	}
 
 	public long getPageId() {

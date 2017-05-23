@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="website" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3" >
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MuruPuru</title>
+<link rel="icon" type="image/png" href="favicon-32x32.png sizes=32x32"></link>
+<link rel="icon" type="image/png" href="favicon-16x16.png sizes=16x16"></link>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"></link>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css"></link>
+<link rel="stylesheet" href="css/style.css"></link>
+<link rel="stylesheet" href="css/responsive.css"></link>
+<link rel="stylesheet" href="css/admin.css"></link>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-materialize/0.2.1/angular-materialize.min.js"></script>
+</head>
+
+
+<body>
+	<div id="map"></div>
+	<div id="page_wrapper">
+
+		<!-- Landing Page Content 	-->
+		<div id="landing">
+			<div id="l_content">
+				<div id="c_logo" class="flow-text col s12">
+					<img src="img/logo.png" alt="MP"></img>
+				</div>
+				<div id="c_name" class="flow-text col s12">MURUPURU</div>
+				
+				<div id="name"  class='login-box'> 
+			    	<div class="logging" th:if="${param.error}"> Invalid username and/or password.</div>
+					<div class="logging" th:if="${param.logout}"> You have been logged out. </div>
+					<form th:action="@{/login}" method="post">
+						<div class = "logging"><label> User Name: <input type="text" name="username"/> </label></div>
+				        <div class = "logging"><label> &nbsp; Password: <input type="password" name="password"/> </label></div>
+				        <div class = "logging" ><input class="waves-effect waves-light btn-large" id="logInBtn" type="submit" value="Sign In"/></div>
+				    </form>
+				</div>
+					
+			</div>
+			<canvas class="canvas"> </canvas>
+		</div>
+		
+						
+					
+
+				
+	</div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+<script type="text/javascript" src="js/jquery.particles.js"></script>
+
+</html>

@@ -1,388 +1,391 @@
 body {
-    margin: 0
+	margin: 0
 }
 
 /* Lowest layer that is fixed under the other */
 #map {
-    position: fixed;
-    margin-top: 0;
-    height: 100%;
-    width: 100%;
-    background-image: url(../img/map.png);
-    background-size: cover;
-    z-index: -10
+	position: fixed;
+	margin-top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: url(../img/map.png);
+	background-size: cover;
+	z-index: -10
 }
 
 /* Wrapper holding most of webpage content */
 #page_wrapper {
-    position: absolute;
-    z-index: 10;
-    overflow: hidden;
-    width: 100%;
-    margin-top: 0
+	position: absolute;
+	z-index: 10;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 0
 }
 
 /* Mobile Menu */
 #mobile_menu_init_btn {
-    position: fixed;
-    width: 50px;
-    height: 50px;
-    background-image: url(../img/mb-m.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 200;
-    opacity: .3;
-    margin: 10px
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/mb-m.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 200;
+	opacity: .3;
+	margin: 10px
 }
 
 #mobile_menu_wrapper {
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 300;
-    width: 100vw;
-    height: 100vh
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 300;
+	width: 100vw;
+	height: 100vh
 }
 
 .hidden {
-    position: fixed;
-    left: -100vw;
-    z-index: 9999
+	position: fixed;
+	left: -100vw;
+	z-index: 9999
 }
 
 .showing {
-    left: 0
+	left: 0
 }
 
 #mobile_menu_block {
-    text-align: center;
-    font-weight: 400;
-    font-size: 20px;
-    width: 50%;
-    height: 100%;
-    background-color: #fff
+	text-align: center;
+	font-weight: 400;
+	font-size: 20px;
+	width: 50%;
+	height: 100%;
+	background-color: #fff
 }
 
 #mm_logo {
-    width: 100%;
-    height: 100px;
-    border-bottom: solid 1px #2ea597
+	width: 100%;
+	height: 100px;
+	border-bottom: solid 1px #2ea597
 }
 
 #mm_logo img {
-    margin-top: 15px;
-    width: 70px;
-    height: 70px
+	margin-top: 15px;
+	width: 70px;
+	height: 70px
 }
-
 
 /* Menu on Laptops and Desktops */
 #menu {
-    width: 100%;
-    height: 70px;
-    background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    z-index: 99;
-    text-align: center;
-    font-weight: 300;
-    font-size: 20px
-} 
-
+	width: 100%;
+	height: 70px;
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19);
+	z-index: 99;
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px
+}
 
 /* 	Sticky Menu - makes the menu stick to the top of the page
 	Continues in Jquery.menu.js file
  */
-// Class for when element is above threshold .pin-top{position:relative}
-// Class for when element is below threshold .pin-bottom{position:relative}
-// Class for when element is pinned .pinned{position:fixed!important}
+//
+Class for when element is above threshold .pin-top {
+	position: relative
+}
+
+//
+Class for when element is below threshold .pin-bottom {
+	position: relative
+}
+
+//
+Class for when element is pinned .pinned {
+	position: fixed !important
+}
 
 .menu-scrolled {
-    position: fixed;
-    width: 100%;
-    top: 0
+	position: fixed;
+	width: 100%;
+	top: 0
 }
 
 .m_but {
-    overflow: hidden;
-    display: inline-block;
-    vertical-align: top;
-    font-weight: 400;
-    width: 17vw;
-    max-width: 170px
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+	font-weight: 400;
+	width: 17vw;
+	max-width: 170px
 }
 
 .m_but:hover {
-    color: #2ea597;
-    cursor: pointer;
-    cursor: hand
+	color: #2ea597;
+	cursor: pointer;
+	cursor: hand
 }
 
 #menu img {
-    height: 60px;
-    width: 60px;
-    margin-top: 5px
+	height: 60px;
+	width: 60px;
+	margin-top: 5px
 }
-
 
 /* Landing Page content */
 #landing {
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    text-align: center;
-    color: white
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+	color: white
 }
 
 .canvas {
-    position: relative;
-    z-index: -1;
-    background-image: url(../img/2.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh
+	position: relative;
+	z-index: -1;
+	background-image: url(../img/2.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100vh
 }
 
 #l_content {
-    position: absolute;
-    margin-top: 7vh;
-    width: 100%
+	position: absolute;
+	margin-top: 7vh;
+	width: 100%
 }
 
 #c_logo img {
-    width: 10%;
-    min-width: 50px;
-    margin-top: 5vh
+	width: 10%;
+	min-width: 50px;
+	margin-top: 5vh
 }
 
 #c_name {
-    font-weight: 700;
-    font-size: 130%
+	font-weight: 700;
+	font-size: 130%
 }
 
 #c_slogan {
-    font-weight: 200;
-    font-size: 100%
+	font-weight: 200;
+	font-size: 100%
 }
 
 #c_phone {
-    font-weight: 600;
-    font-size: 110%;
-    color: #3a3a3a
+	font-weight: 600;
+	font-size: 110%;
+	color: #3a3a3a
 }
 
 #languages {
-    padding-top: 1em;
-    margin: 0
+	padding-top: 1em;
+	margin: 0
 }
 
 #languages img {
-    width: 3em
+	width: 3em
 }
 
 #languages img:hover {
-    cursor: pointer
+	cursor: pointer
 }
 
 .section_wrapper {
-    background-color: #fff;
-    padding: 10%;
-    text-align: center
+	background-color: #fff;
+	padding: 10%;
+	text-align: center
 }
 
 .half {
-    width: 99%;
-    max-width: 400px;
-    display: inline-block;
-    vertical-align: top;
-    margin: 0 auto
+	width: 99%;
+	max-width: 400px;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 auto
 }
-
 
 /* Service Div */
 #services img {
-    width: 100%
+	width: 100%
 }
 
 .header h1 {
-    font-weight: 400;
-    font-size: 2em
+	font-weight: 400;
+	font-size: 2em
 }
 
 .small_h {
-    margin-top: 0;
-    font-weight: 400;
-    font-size: 1.5em
+	margin-top: 0;
+	font-weight: 400;
+	font-size: 1.5em
 }
-
 
 /* Divider Div */
 .banner {
-    background-image: url(../img/2.png);
-    background-size: cover;
-    text-align: center;
-    height: 10em;
-    opacity: .55;
-    width: 100%
+	background-image: url(../img/2.png);
+	background-size: cover;
+	text-align: center;
+	height: 10em;
+	opacity: .55;
+	width: 100%
 }
-
 
 /* About Div */
 #about img {
-    height: 7em;
-    margin-bottom: 5%
+	height: 7em;
+	margin-bottom: 5%
 }
 
 #about p {
-    width: 90%;
-    max-width: 900px;
-    margin: 0 auto
+	width: 90%;
+	max-width: 900px;
+	margin: 0 auto
 }
-
 
 /* Contact Div */
 #contact {
-    width: 100%;
-    margin: 0 auto;
-    display: inline-block;
-    vertical-align: top
+	width: 100%;
+	margin: 0 auto;
+	display: inline-block;
+	vertical-align: top
 }
-
 
 /* Divider Div left or upper side*/
 .left_row {
-    width: 100%;
-    margin-top: 7%
+	width: 100%;
+	margin-top: 7%
 }
 
 .left_header {
-    margin: 0 auto;
-    font-size: 1.5em;
-    width: 60%;
-    font-weight: 500
+	margin: 0 auto;
+	font-size: 1.5em;
+	width: 60%;
+	font-weight: 500
 }
 
 .left_header img {
-    width: 1em;
-    padding: .1em;
-    margin-right: 3px
+	width: 1em;
+	padding: .1em;
+	margin-right: 3px
 }
 
 .left_text {
-    margin: 0 auto;
-    font-size: 130%;
-    width: 70%
+	margin: 0 auto;
+	font-size: 130%;
+	width: 70%
 }
 
 .social_icon {
-    margin-top: 30px;
-    margin-right: 15px;
-    display: inline-block;
-    height: 55px;
-    width: 55px;
-    overflow: hidden
+	margin-top: 30px;
+	margin-right: 15px;
+	display: inline-block;
+	height: 55px;
+	width: 55px;
+	overflow: hidden
 }
 
 .social_icon img {
-    height: 101%;
-    width: 101%
+	height: 101%;
+	width: 101%
 }
 
 .social_icon:hover {
-    cursor: pointer;
-    cursor: hand
+	cursor: pointer;
+	cursor: hand
 }
 
 #linkedin {
-    background-color: #39393a
+	background-color: #39393a
 }
 
 #linkedin:hover {
-    background-color: #0077b5
+	background-color: #0077b5
 }
 
 #facebook {
-    background-color: #39393a
+	background-color: #39393a
 }
 
 #facebook:hover {
-    background-color: #3b5998
+	background-color: #3b5998
 }
 
 #google {
-    background-color: #39393a
+	background-color: #39393a
 }
 
 #google:hover {
-    background-color: #db3236
+	background-color: #db3236
 }
-
 
 /* Divider Div right or lower side */
 #contact_right {
-    overflow: hidden;
-    margin-top: 25px
+	overflow: hidden;
+	margin-top: 25px
 }
 
 #contact_right h1 {
-    margin-top: 10%
+	margin-top: 10%
 }
 
 .input-btn {
-    margin-top: ¨25px;
-    width: 100px;
-    height: 40px;
-    background: gray;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 130%;
-    text-transform: uppercase;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
-    border: 0;
-    transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out
+	margin-top: ¨25px;
+	width: 100px;
+	height: 40px;
+	background: gray;
+	border-radius: 4px;
+	color: #fff;
+	font-size: 130%;
+	text-transform: uppercase;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
+	border: 0;
+	transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out
 }
 
 .input-btn:hover {
-    background: #2ea597;
-    color: #fff
+	background: #2ea597;
+	color: #fff
 }
-
 
 /* Page Footer */
 #footer {
-    z-index: 10;
-    height: 150px;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: url(../img/2.png);
-    text-align: center
+	z-index: 10;
+	height: 150px;
+	width: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-image: url(../img/2.png);
+	text-align: center
 }
 
 .footer-logo {
-    padding-top: 2em;
-    padding-bottom: 10px
+	padding-top: 2em;
+	padding-bottom: 10px
 }
 
 .footer-logo a img {
-    height: 3.5em
+	height: 3.5em
 }
 
 .pealkiri {
-    font-weight: normal;
-    font-size: 100%;
-    padding: 0
+	font-weight: normal;
+	font-size: 100%;
+	padding: 0
 }
 
 .pealkiri span a {
-    text-decoration: none;
-    color: black
+	text-decoration: none;
+	color: black
 }
 
 .pealkiri span a:hover {
-    text-decoration: none;
-    color: #fff;
-    cursor: pointer;
-    cursor: hand
+	text-decoration: none;
+	color: #fff;
+	cursor: pointer;
+	cursor: hand
 }
+

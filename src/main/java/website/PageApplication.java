@@ -16,8 +16,10 @@ import org.springframework.web.client.RestTemplate;
 
 import website.objects.Language;
 import website.objects.Page;
+import website.objects.User;
 import website.repositories.LanguageRepository;
 import website.repositories.PageRepository;
+import website.repositories.UserRepository;
 
 @SpringBootApplication
 public class PageApplication {
@@ -38,7 +40,7 @@ public class PageApplication {
 
 	/* Connects with Repositories*/
 	@Bean
-	public CommandLineRunner page(PageRepository pagerepository, LanguageRepository langrepository) {
+	public CommandLineRunner page(PageRepository pagerepository, LanguageRepository langrepository, UserRepository userrepository) {
 		
 		return (args) -> {
 			log.info("save a starting data");
@@ -67,6 +69,8 @@ public class PageApplication {
 					+ " Tehdän teidän kanssa tiivistä yhteitöitä takaamme, että tulos vastaa tarkka teidän toivolle. Meidän verkkosivut näytävät hienoltä kaikillä näytoillä.", 
 					"Perustettu 2016 vuoden lopulla, olemme me nuori yritys mille kunnianhimoinen yritys, jolla on runsaasti kunniahimo ja energia todistadaa itsea. Me teemme mitä me rakastamme ja rakastamme mitä teemme.", 
 					"YHTEYTTÄ" ,"Osoitte", "Kurkimäentie 19 G55 Helsinki Suomi 09400", "Puhelin",  "+358 4070 8489", "info@murupuru.com", "Jätke viesti", "Sähköposti", "Teksti", "Lähettä", langrepository.findByLanguage("Finnish").get(0), "Nimi"));
+			
+			userrepository.save(new User("admin", "$2a$07$FAINwg3QYpEzi5bPTqcVzuVTullHuOsrcWPRbAT9NAzDmr3YCoPiK", "ADMIN")); /* Username: admin, Password: admin */
 			
 			/* Writes all the pages from page repository to console*/
 			log.info("Get all pages");

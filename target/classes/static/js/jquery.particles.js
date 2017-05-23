@@ -1,4 +1,7 @@
-
+/*
+ * NOTE FOR POSSIBLE EMLOYERS:
+ * THIS FILE IS NOT WRITTEN BY ME
+ */
 if (typeof jQuery === "undefined") {
     console.log("Make sure jQuery is included before jquery.particles.js")
 }(function(g, f) {

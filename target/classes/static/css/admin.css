@@ -1,0 +1,53 @@
+/* Log in Page */
+.login-box {
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+
+@media only screen and (min-height:361px) {
+	.login-box {
+		display: block;
+	}
+}
+
+@media only screen and (max-height:761px) and (orientation:landscape) {
+	.login-box {
+		display: inline-block;
+	}
+}
+
+/* Admin Page */
+#admin_panel {
+	position: fixed;
+	z-index: 999;
+	margin-top: 1vh;
+	margin-left: 85vw;
+	background-color: rgba(0, 0, 0, 0.3);
+	border-radius: 5px;
+}
+
+.log_out {
+	background-color: Transparent;
+	background-repeat: no-repeat;
+	border: none;
+	cursor: pointer;
+	overflow: hidden;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+@media only screen and (max-width:501px) {
+#admin_panel .m_but{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+#admin_panel {
+	margin-left: 70vw;
+	width: 100px;
+}
+}

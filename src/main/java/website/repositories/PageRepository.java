@@ -1,8 +1,3 @@
-/*
- * This class acts as library, storing all the Language objects
- * 
- */
-
 package website.repositories;
 
 import java.util.List;
@@ -11,6 +6,8 @@ import org.springframework.data.repository.CrudRepository;
 
 import website.objects.Page;
 
+
+/* Stores the list of Page entities */
 public interface PageRepository extends CrudRepository<Page, Long> {
 	
 	/* Since Language and Page tables are joined:

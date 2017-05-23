@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="website">
+<html ng-app="website" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css"></link>
     <link rel="stylesheet" href="css/style.css"></link>
     <link rel="stylesheet" href="css/responsive.css"></link>
+    <link rel="stylesheet" href="css/admin.css"></link>
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
@@ -32,8 +33,6 @@
                 <p class="m_serv mobile_btn">{{pages.services}}</p>
                 <p class="m_team mobile_btn">{{pages.about}}</p>
                 <p class="m_contact mobile_btn">{{pages.contact}}</p>
-                <p class="m_save mobile_btn" id="save_m">SAVE</p>
-                <p class="m_log mobile_btn">LOG OUT</p>
             </div>
         </div>
         <div id="mobile_menu_init_btn" class="hide-on-large-only"></div>
@@ -41,13 +40,28 @@
 
 	<!-- Landing Page Content -->
         <div id="landing">
+        
+    <!-- Admin Buttons -->
+        <div id="admin_panel">
+        	<div class="m_but">
+                <p id="save">SAVE</p>
+            </div>
+            <div class="m_but">        
+                <form id = "signOut" th:action="@{/logout}" method="post">
+					<input type="submit"  class="log_out" value="SIGN OUT"></input>
+				</form> 
+            </div>
+         </div>
+        
+        
+        
             <div id="l_content">
                 <div id="c_logo" class="flow-text col s12">
                     <img src="img/logo.png" alt="MP"></img>
                 </div>
                 <div id="c_name" class="flow-text col s12">MURUPURU</div>
                 <div id="c_slogan" class="content flow-text col s12">{{pages.slogan}}</div>
-                <div id="c_phone" class="flow-text col s12">{{pages.phoneTxt}}</div>
+                <div id="c_phone" class="content flow-text col s12" >{{pages.phoneTxt}}</div>
                 <div class="row" id="languages">
                     <img id="suomi" src="img/suomi.png" alt="Suomi"></img>
                     <img id="english" src="img/uk.png" alt="English"></img>
@@ -60,9 +74,7 @@
 
 	<!-- Menu for laptops and desktops -->
         <div id="menu" class="pin hide-on-med-and-down flow-text">
-            <div class="m_but">
-                <p class="m_save" id="save">SAVE</p>
-            </div>
+            
             <div class="m_but">
                 <p class="content m_home" id="home_d">{{pages.home}}</p>
             </div>
@@ -78,9 +90,9 @@
             <div class="m_but">
                 <p class="content m_contact" id="contact_d">{{pages.contact}}</p>
             </div>
-            <div class="m_but">
-                <p class="m_log">LOG OUT</p>
-            </div>
+            
+            
+            
         </div>
 
  	<!-- Services Div -->
@@ -135,7 +147,7 @@
                         <div class="content left_header ico_H " id="phoneH" >
                             <img src="img/phone.png"></img>{{pages.phoneH}}
                         </div>
-                        <div class="content left_text" id="phoneTxt">{{pages.phoneTxt}}</div>
+                        <div class="left_text">{{pages.phoneTxt}}</div>
                     </div>
                     <div class="left_row">
                         <div class="content left_header ico_H " id="eMail">

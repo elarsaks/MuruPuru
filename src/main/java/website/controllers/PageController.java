@@ -1,16 +1,12 @@
-/*
- * This is a main controller class handling the page traffic.
- * 
- */
-
 package website.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
 
+/*Directs the traffic on the website */
+@Controller
 public class PageController {
 	
 	@RequestMapping("/")
@@ -21,6 +17,11 @@ public class PageController {
 	@RequestMapping("/admin")
 	public String admin(Model model){
 		return"admin";
+	}
+	
+	@RequestMapping("/login")
+	public String login(Model model){
+		return"login";
 	}
 	
 }

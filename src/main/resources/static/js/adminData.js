@@ -21,7 +21,7 @@ function save() {
 	var addressH = $('#addressH');
 	var addressTxt = $('#addressTxt');
 	var phoneH = $('#phoneH');
-	var phoneTxt = $('#phoneTxt');
+	var phoneTxt = $('#c_phone');
 	var eMailTxt = $('#eMailTxt');
 	var message = $('#message');
 	var eMail = $('#eMail');
@@ -53,7 +53,7 @@ function save() {
 	/* Send data to the database */
 	$.ajax({
 		type : 'PATCH',
-		url : 'http://localhost:8080/api/pages/' + memory,
+		url : '/api/pages/' + memory,
 		contentType : 'application/json; charset=utf-8',
 		data : JSON.stringify(JSONObject),
 		dataType : 'json',
